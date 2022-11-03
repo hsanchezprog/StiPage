@@ -1,6 +1,6 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/example/public_html/
+    - export DEPLOYPATH=/home/grupote7/public_html/
     - /bin/cp -R images $DEPLOYPATH
     - /bin/cp -R ajax/. $DEPLOYPATH
     - /bin/cp -R css/. $DEPLOYPATH
