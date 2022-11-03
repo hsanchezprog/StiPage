@@ -2,3 +2,12 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/example/public_html/
     - /bin/cp -R images $DEPLOYPATH
+    - /bin/cp -R ajax/. $DEPLOYPATH
+    - /bin/cp -R css/. $DEPLOYPATH
+    - /bin/cp -R js/. $DEPLOYPATH
+    - /bin/cp -R master/. $DEPLOYPATH
+    - /bin/cp -R php/. $DEPLOYPATH
+    - /bin/cp -R vendor/. $DEPLOYPATH
+    - /bin/cp -R video/. $DEPLOYPATH
+    - /bin/cp -R contact.html $DEPLOYPATH
+    - /bin/cp -R index.html $DEPLOYPATH
