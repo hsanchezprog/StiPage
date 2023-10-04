@@ -24,6 +24,20 @@ function tipoCambioPrev() {
         $("#TCDP3").append("<b style='color: red;'> $ " + response + " MXN</div></b>");
     });
 }
+function getINPC(){
+    var settings = {
+        "url":"https://www.banxico.org.mx/SieAPIRest/service/v1/series/SP1/datos/oportuno?token=258afae10151e5eeab9116d68ba1d03f983297ee5d25881f03a893d18c811106",
+        "method": "GET",
+        "timeout": 0,
+    };
+    $.ajax(settings).done(function (response) {
+        $("#INPCD").empty();
+        $("#INPCD").append("<div>INPC Publicado " + getDateToday() + " a:</div>");
+        $("#INPCV").empty();
+        $("#INPCV").append("<b style='color: red;'>" + response.bmx.series[0].datos[0].dato + "</b>");
+        console.log ();
+    });
+}
 function getDateToday(){
     const d = new Date();
     var dd = d.getDate();
