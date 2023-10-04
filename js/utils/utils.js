@@ -34,7 +34,11 @@ function getINPC(){
         $("#INPCD").empty();
         $("#INPCD").append("<div>INPC Publicado " + getDateToday() + " a:</div>");
         $("#INPCV").empty();
-        $("#INPCV").append("<b style='color: red;'>" + response.bmx.series[0].datos[0].dato + "</b>");
+
+        var numb = response.bmx.series[0].datos[0].dato;
+        numb = parseFloat(numb).toFixed(4)
+
+        $("#INPCV").append("<b style='color: red;'>" + numb + "</b>");
         console.log ();
     });
 }
