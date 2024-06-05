@@ -32,7 +32,7 @@ function getINPC(){
     };
     $.ajax(settings).done(function (response) {
         $("#INPCD").empty();
-        $("#INPCD").append("<div>INPC Publicado " + getDateToday() + " a:</div>");
+        $("#INPCD").append("<div>INPC Publicado 10 de mayo 2024 a:</div>");
         $("#INPCV").empty();
 
         var numb = response.bmx.series[0].datos[0].dato;
@@ -45,7 +45,7 @@ function getINPC(){
 function getDateToday(){
     const d = new Date();
     var dd = d.getDate();
-    var mm = d.getMonth();
+    var mm = d.getMonth() +1 ;
     var yyyy = d.getFullYear();
     
     if(dd<10)
@@ -64,7 +64,7 @@ function getDateToday(){
 function getDateTomorrow(){
     const d = new Date();
     var dd = d.getDate() + 1;
-    var mm = d.getMonth();
+    var mm = d.getMonth() + 1;
     var yyyy = d.getFullYear();
     
     if(dd<10)
