@@ -31,12 +31,15 @@ function getINPC(){
         "timeout": 0,
     };
     $.ajax(settings).done(function (response) {
-        $("#INPCD").empty();
-        $("#INPCD").append("<div>INPC Publicado 10 de mayo 2024 a:</div>");
-        $("#INPCV").empty();
 
         var numb = response.bmx.series[0].datos[0].dato;
         numb = parseFloat(numb).toFixed(4)
+
+        var dat = response.bmx.series[0].datos[0].fecha;
+
+        $("#INPCD").empty();
+        $("#INPCD").append("<div>INPC Publicado el " + dat + " a:</div>");
+        $("#INPCV").empty();
 
         $("#INPCV").append("<b style='color: red;'>" + numb + "</b>");
         console.log ();
