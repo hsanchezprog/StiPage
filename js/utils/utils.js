@@ -38,7 +38,7 @@ function getINPC(){
         var dat = response.bmx.series[0].datos[0].fecha;
 
         $("#INPCD").empty();
-        $("#INPCD").append("<div>INPC Publicado el 10/10/2025:</div>");
+        $("#INPCD").append("<div>INPC Publicado el 09/01/2026:</div>");
         $("#INPCV").empty();
 
         $("#INPCV").append("<b style='color: red;'>" + numb + "</b>");
